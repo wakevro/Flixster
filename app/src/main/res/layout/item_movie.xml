@@ -4,23 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#e0e0eb">
+    android:background="#262626">
 
     <ImageView
         android:id="@+id/ivPoster"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="0dp"
+        android:adjustViewBounds="true"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
         android:layout_toEndOf="@+id/ivPoster"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#e6e6e6"
         android:textSize="24sp"
         tools:text="Fantastic Beasts: The Secrets of Dumbledore" />
 
@@ -28,11 +33,26 @@
         android:id="@+id/tvOverview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTitle"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="0dp"
+        android:layout_below="@+id/tvReleaseDate"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="10dp"
         android:layout_toEndOf="@+id/ivPoster"
+        android:textColor="#cccccc"
         tools:text="Professor Albus Dumbledore knows the powerful, dark wizard Gellert Grindelwald is moving to seize control of the wizarding world. Unable to stop him alone, he entrusts magizoologist Newt Scamander to lead an intrepid team of wizards and witches. They soon encounter an array of old and new beasts as they clash with Grindelwald's growing legion of followers." />
+
+    <TextView
+        android:id="@+id/tvReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="65dp"
+        android:layout_toEndOf="@+id/ivPoster"
+        android:textColor="@android:color/holo_orange_dark"
+        tools:text="Release Date" />
 
 </RelativeLayout>

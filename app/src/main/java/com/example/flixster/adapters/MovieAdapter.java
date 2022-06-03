@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.flixster.MovieDetailsActivity;
 import com.example.flixster.R;
 import com.example.flixster.models.Movie;
@@ -57,6 +58,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
 
         TextView tvTitle;
         TextView tvOverview;
+        TextView tvReleaseDate;
         ImageView ivPoster;
 
         public ViewHolder(@NonNull View itemView) {
@@ -64,13 +66,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvOverview = itemView.findViewById(R.id.tvOverview);
             ivPoster = itemView.findViewById(R.id.ivPoster);
-
+            tvReleaseDate = itemView.findViewById(R.id.tvReleaseDate);
             itemView.setOnClickListener(this);
         }
 
         public void bind(Movie movie) {
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
+            tvReleaseDate.setText(movie.getReleaseDate());
             String imageUrl;
 
             //Change image url depending on landscape or portrait mode
@@ -81,11 +84,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             }
 
 
+            Log.d("Richard", imageUrl);
 
+            int radius = 35;
             Glide.with(context)
                     .load(imageUrl)
                     .placeholder(R.drawable.flicks_movie_placeholder)
-
+                    .transform(new RoundedCorners(radius))
                     .into(ivPoster);
         }
 

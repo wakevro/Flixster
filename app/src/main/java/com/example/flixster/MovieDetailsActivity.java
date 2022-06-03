@@ -23,6 +23,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
     RatingBar rbDetailsVoteAverage;
     ImageView ivDetailsPoster;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,8 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
         tvDetailsTitle.setText(movie.getTitle());
         tvDetailsOverview.setText(movie.getOverview());
+
+//        Log.e("Movie Id", movie.getMovieId());
 
         float voteAverage = movie.getVoteAverage().floatValue();
         rbDetailsVoteAverage.setRating(voteAverage / 2.0f);
@@ -55,4 +58,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
 
     }
+
+
 }
