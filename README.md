@@ -33,7 +33,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-https://submissions.us-east-1.linodeobjects.com/metau_android/7f1_phf-.gif
+<img src='https://github.com/wakevro/Flixster/blob/main/flixster.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 ## Notes
 
